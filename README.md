@@ -77,6 +77,7 @@ Default output format [None]: ENTER
 # aws s3 --profile cloudtrail cp s3://s3-traillogs-bucket-name/AWSLogs /es_data/traillogs/ --recursive
 ```
 > Inplace of "s3-traillogs-bucket-name", use your actual s3 bucket where traillogs are saved.
+
 ## Sending logs to Elasticsearch
 - Unzip all downloaded cloudtrail logs.
 ```sh
