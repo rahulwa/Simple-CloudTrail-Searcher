@@ -94,6 +94,7 @@ So now we are going to make a simple script that will do this jobs.
 # sed 's/^/curl -XPOST http://localhost:9200/AWS-account-name/old -d @/' /es_data/logs.list > /es_data/logs.sh
 ```
 > here we are making a HTTP POST request to Elasticsearch on port 9200 with [Index and type](https://www.elastic.co/guide/en/elasticsearch/guide/current/index-doc.html#_autogenerating_ids) as "AWS-account-name"(your AWS account name to identify easily) and "old"(useful in future).
+
 - Now make it executable and run.
 ```sh
 # chmod u+x /es_data/logs.sh
