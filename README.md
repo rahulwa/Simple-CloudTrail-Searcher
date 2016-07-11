@@ -113,3 +113,11 @@ http://localhost:9200/_plugin/head
 ```
 Follow [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/guide/current/search-in-depth.html) and [head plugin](https://mobz.github.io/elasticsearch-head/) for more on searching.
 ## Future
+Note that we have not enabled this service to start automatically. So if you want to start this service, make sure that docker engine is running. and just start the container.
+```sh
+# docker start es-cloudtrail
+```
+
+**Now we can search events happened till the time latest downloaded traillogs but question remains about future events happened after this. Sure we can search events happened in latest 7 days from AWS CloudTrail console.
+But there will be gaps so how to solve this?**
+We can solve this by making a cron job script that will [sync](http://docs.aws.amazon.com/cli/latest/reference/s3/sync.html) traillogs from S3 to local machine and then checking if files created on this date then it will prefix above HTTP POST to all newly created filenames list.
